@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.leftCol {
+    margin-top: 80px;
+    margin-left: 4px;
+    width: 300px;
+    float: left;
+}
+
+.rightCol {
+    margin-top: 2px;
+    margin-left: 80px;
+    float: left;
+    width: 200px;
+}
+
+td:first-child {
+  padding-bottom:8px;
+}

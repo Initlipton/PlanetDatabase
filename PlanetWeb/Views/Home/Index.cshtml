@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Planet Database";
+}
+
+@model IList<PlanetWeb.Model.Planet>
+
+<h1>PlanetDatabase.com</h1>
+
+
+<div class="leftCol" id="test">
+    <p>Welcome to PlanetDatabase.com</p>
+    Please see the list of planets in
+    our solar system on the right
+    hand side.
+</div>
+
+<div class="rightCol">
+    <table id="planetTable">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <b>@item.Name</b>
+                    <div class="planetDistance" style="display:none">
+                        @item.ToString()
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+@section scripts{
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        
+        $('#planetTable tr').click(function () {
+            var result = $(this).find(".planetDistance");
+            result.toggle();
+        });
+    });
+
+</script>
+
+}
